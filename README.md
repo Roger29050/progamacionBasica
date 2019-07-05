@@ -1,6 +1,6 @@
 # progamacionBasica
 
-## Python
+# Python
 
 Es un lenguaje de programación interpretado de tipado dinámico cuya filosofía hace hincapié en una sintaxis que favorezca un código legible. Se trata de un lenguaje de programación multiparadigma y disponible en varias plataformas.
 
@@ -15,7 +15,14 @@ Al hacer uso de una sintaxis legible, la curva de aprendizaje es muy rápida, si
 
 Python contiene una gran cantidad de librerías, tipos de datos y funciones incorporadas en el propio lenguaje, que ayudan a realizar muchas tareas comunes sin necesidad de tener que programarlas desde cero. Pero lo que realmente le hace brillante utilizándolo en una Raspberry Pi, es por la capacidad de poder utilizar los pines GPIO para conectar el mundo físico con el mundo digital.
 
-# 1.- El programa 'hola mundo'
+## Como ejecutar el código
+
+Se debe de escribir el código en un editor de texto como bloc de notas o algún otro y posteriormente guardarlo con el nombre que se desee (finaliza el nombre con '.py') y al guardarlo en la opción tipo selecciona 'todos los documentos'
+
+Para ejecutar el código se necesita abrir la central de python que se llama anaconda prompt, después de eso se usara el comando ‘dir’ para desplegar las carpetas del equipo y cd para leer una en específico 'cd documentos' y cuando se consiga llegar a la carpeta en la que esta guardado mi documento se coloca python y el nombre del documento, al dar enter se correrá el código.
+
+
+## 1.- El programa 'hola mundo'
 
 El Hola Mundo se caracteriza por su sencillez, especialmente cuando se ejecuta en una interfaz de línea de comandos. En interfaces gráficas la creación de este programa requiere de más pasos.
 El programa Hola Mundo también puede ser útil como prueba de configuración para asegurar que el compilador, el entorno de desarrollo y el entorno de ejecución estén instalados correctamente y funcionando.
@@ -23,9 +30,10 @@ Se escribiría de la siguiente manera:
 
 print('Hola mundo')  ->Hola mundo
 
-# 2.-Números y operaciones aritmeticas:
+## 2.-Números y operaciones aritmeticas:
 
-Enteros y decimales
+### Enteros y decimales
+
 Python distingue entre números enteros y decimales. Al escribir un número decimal, el separador entre la parte entera y la parte decimal es un punto.
 
 3->3
@@ -40,7 +48,8 @@ Se puede escribir un número decimal sin parte entera, pero lo habitual es escri
 
 .3->0.3
 
-Las cuatro operaciones básicas
+### Las cuatro operaciones básicas
+
 Las cuatro operaciones aritméticas básicas son la suma (+), la resta (-), la multiplicación (*) y la división (/).
 
 Al hacer operaciones en las que intervienen números enteros y decimales, el resultado es siempre decimal. En el caso de que el resultado no tenga parte decimal, Python escribe 0 como parte decimal para indicar que el resultado es un número decimal:
@@ -84,7 +93,7 @@ El cociente de una división se calcula en Python con el operador //. El resulta
 
 20 // 6.0->3.0
 
-Potencias y raíces
+### Potencias y raíces
 
 Las potencias se calculan con el operador **, teniendo en cuenta que x ** y = xy.
 
@@ -97,7 +106,7 @@ Utilizando exponentes negativos o decimales se pueden calcular potencias inversa
 
 10 ** -4->0.0001           # Recuerde que a-b= 1/ab
 
-La función integrada round()
+### La función integrada round()
 
 Para redondear un número (por ejemplo, cuando se muestra al usuario el resultado final de un cálculo), se puede utilizar la función integrada round(). La función integrada round() admite uno o dos argumentos numéricos.
 
