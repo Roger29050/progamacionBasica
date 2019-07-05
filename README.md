@@ -122,3 +122,14 @@ Si el segundo argumento es positivo, el primer argumento se redondea con el núm
 
 round(4.3527, 2)->4.35
 
+Variables en Programación
+En Programación también existe el concepto de "variable", parecido pero no idéntico al concepto matemático.
+
+Las variables
+En Programación, las variables están asociadas a variables concretos. Además, cada lenguaje de programación tiene su forma de implementar el concepto de variable, por lo que lo que se explica a continuación es válido para muchos lenguajes de programación, aunque otros lenguajes de programación permiten otras posibilidades.
+
+
+En muchos lenguajes de programación, una variable se puede entender como una especie de caja en la que se puede guardar un valor (por ejemplo, un valor numérico). Esa caja suele corresponder a una posición de memoria en la memoria del ordenador.
+Las variables se representan también mediante letras o palabras completas: x, y, a, b, nombre, apellidos, edad, etc.
+Cuando en esos lenguajes de programación escribimos la instrucción ...
+a = 2
