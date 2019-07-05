@@ -122,14 +122,253 @@ Si el segundo argumento es positivo, el primer argumento se redondea con el núm
 
 round(4.3527, 2)->4.35
 
-Variables en Programación
+## Variables en Programación
+
 En Programación también existe el concepto de "variable", parecido pero no idéntico al concepto matemático.
 
 Las variables
 En Programación, las variables están asociadas a variables concretos. Además, cada lenguaje de programación tiene su forma de implementar el concepto de variable, por lo que lo que se explica a continuación es válido para muchos lenguajes de programación, aunque otros lenguajes de programación permiten otras posibilidades.
 
-
 En muchos lenguajes de programación, una variable se puede entender como una especie de caja en la que se puede guardar un valor (por ejemplo, un valor numérico). Esa caja suele corresponder a una posición de memoria en la memoria del ordenador.
 Las variables se representan también mediante letras o palabras completas: x, y, a, b, nombre, apellidos, edad, etc.
 Cuando en esos lenguajes de programación escribimos la instrucción ...
 a = 2
+
+Entrada por teclado: la función input()
+Índice de Python  Principio de la página
+
+## Entrada por teclado La función input()
+
+### Variables en input()
+
+En Informática, la "entrada" de un programa son los datos que llegan al programa desde el exterior. Actualmente, el origen más habitual es el teclado.
+
+Subrutinas y bibliotecas en Programación
+A veces, en un determinado programa es necesario efectuar una misma tarea en distintos puntos del programa y, a menudo, en diferentes programas es necesario efectuar una misma tarea. Para evitar tener que volver a escribir una y otra vez las mismas instrucciones, casi todos los lenguajes de programación permiten agrupar porciones de programa y reutilizarlos en un mismo programa o en diferentes programas.
+
+Estas agrupaciones de código fueron inventadas en 1951 por Maurice Wilkes, matemático y físico británico que construyó en 1949 el EDSAC, el primer ordenador que almacenaba los programas en la propia circuitería del ordenador. Por sus contribuciones a la informática, Wilkes recibió en 1967 el premio Turing, considerado el premio Nobel de la Informática. Wilkes bautizó a las agrupaciones de código con el nombre de subrutinas, pero posteriores lenguajes de programación les han ido dando distintos nombres (subrutinas, procedimientos, funciones, métodos, etc.) y dándoles distintas características.
+
+Las subrutinas tienen muchas ventajas evidentes:
+
+ahorrar trabajo: si sabemos cómo realizar una tarea, no es necesario volver a programarla una y otra vez.
+facilitar el mantenimiento: si descubrimos errores en una subrutina, sólo hay que corregirlos en un sitio, sin tener que recordar en cuántos sitios utilizamos el algoritmo.
+simplificar el código: la longitud y complejidad del programa se reducen porque las tareas repetitivas ya no aparecen en el cuerpo del programa.
+facilitar la creación de programas: el trabajo se puede dividir entre varios programadores (unos escriben las subrutinas, otros el cuerpo principal del programa, etc.).
+Si una subrutina se va a utilizar en un único programa, se suele definir en el propio programa. Pero cuando una subrutina se va a utilizar en varios programas, no es necesario repetirla en cada programa (se perderían algunas de las ventajas comentadas anteriormente), sino que se puede incluir en un fichero aparte al que los programas pueden acceder para recuperar las subrutinas. Estos ficheros reciben el nombre de bibliotecas (en español se suele decir mucho librería, traduciendo incorrectamente el término inglés library).
+
+En Python se utiliza el término función para referirse a las subrutinas y el término módulo para referirse a las bibliotecas.
+
+Última modificación de esta página: 4 de marzo de 2016
+
+##El if
+
+El programa siguiente pide un número positivos al usuario y almacena la respuesta en la variable "numero". Después comprueba si el número es negativo. Si lo es, el programa avisa que no era eso lo que se había pedido. Finalmente, el programa imprime siempre el valor introducido por el usuario. A continuación se pueden ver dos ejecuciones paso a paso de ese programa. En la primera el usuario escribe un valor negativo y en la segunda el usuario escribe un valor positivo:
+
+Ejemplo de if ... 1
+
+numero = int(input("Escriba un número positivo: "))
+
+if numero < 0:
+
+print("¡Le he dicho que escriba un número positivo!")
+
+print(f"Ha escrito el número {numero}")
+
+Escriba un número positivo: -5
+
+¡Le he dicho que escriba un número positivo!
+
+Ha escrito el número -5
+
+Puede ver la ejecución paso a paso de este programa utilizando los iconos de avance y retroceso situados abajo a la derecha.
+ 
+Ejemplo de if ... 1 - Paso 1
+
+numero = int(input("Escriba un número positivo: "))
+
+if numero < 0:
+
+print("¡Le he dicho que escriba un número positivo!")
+
+print(f"Ha escrito el número {numero}")
+
+Escriba un número positivo: -5
+
+Se ejecuta la primera instrucción del programa.
+
+Ejemplo de if ... 2
+numero = int(input("Escriba un número positivo: "))
+if numero < 0:
+    print("¡Le he dicho que escriba un número positivo!")
+print(f"Ha escrito el número {numero}")
+Escriba un número positivo: 5
+Ha escrito el número 5
+Puede ver la ejecución paso a paso de este programa utilizando los iconos de avance y retroceso situados abajo a la derecha.
+ 
+Ejemplo de if ... 2 - Paso 1
+numero = int(input("Escriba un número positivo: "))
+if numero < 0:
+    print("¡Le he dicho que escriba un número positivo!")
+print(f"Ha escrito el número {numero}")
+Escriba un número positivo: 5
+Se ejecuta la primera instrucción del programa.
+En este caso, imprime la pregunta y espera a que el usuario escriba la respuesta y pulse Intro, guardando la respuesta en la variable "numero".
+   
+Ejemplo de if ... 2 - Paso 2
+numero = int(input("Escriba un número positivo: "))
+if numero < 0:
+    print("¡Le he dicho que escriba un número positivo!")
+print(f"Ha escrito el número {numero}")
+Escriba un número positivo: 5
+A continuación se evalúa la condición (numero < 0).
+En este caso, la condición es falsa (False), puesto que 5 no es inferior a 0.
+   
+Ejemplo de if ... 2 - Paso 3
+
+numero = int(input("Escriba un número positivo: "))
+
+if numero < 0:
+
+print("¡Le he dicho que escriba un número positivo!")
+
+print(f"Ha escrito el número {numero}")
+
+Escriba un número positivo: 5
+
+Ha escrito el número 5
+
+Como la condición es falsa, no se ejecutan las instrucciones del bloque y el programa salta a la instrucción siguiente al bloque if ..
+
+La última instrucción del programa imprime el valor introducido y el programa termina.
+
+La estructura de control if ... else ... permite que un programa ejecute unas instrucciones cuando se cumple una condición y otras instrucciones cuando no se cumple esa condición. En inglés "if" significa "si" (condición) y "else" significa "si no". La orden en Python se escribe así:
+
+Sintaxis de la sentencia condicional if ... else ...
+
+La sintaxis de la construcción if ... else ... es la siguiente:
+
+if condición:
+
+aquí van las órdenes que se ejecutan si la condición es cierta
+
+y que pueden ocupar varias líneas
+
+else:
+
+y aquí van las órdenes que se ejecutan si la condición es
+
+falsa y que también pueden ocupar varias líneas
+
+La ejecución de esta construcción es la siguiente:
+
+•	La condición se evalúa siempre.
+
+o	Si el resultado es True se ejecuta solamente el bloque de sentencias 1
+
+o	Si el resultado es False se ejecuta solamente el bloque de sentencias 2.
+
+Más de dos alternativas: if ... elif ... else ...
+
+La construcción if ... else ... se puede extender añadiendo la instrucción elif:
+La estructura de control if ... elif ... else ... permite encadenar varias condiciones. elif es una contracción de else if. La orden en Python se escribe así:
+
+Sintaxis de la sentencia condicional if ... elif ... else ...
+La sintaxis de la construcción if ... elif ... else ... es la siguiente:
+
+if condición_1:
+
+bloque 1
+
+elif condición_2:
+
+bloque 2
+
+else:
+
+bloque 3
+
+•	Si se cumple la condición 1, se ejecuta el bloque 1
+
+•	Si no se cumple la condición 1 pero sí que se cumple la condición 2, se ejecuta el bloque 2
+
+•	Si no se cumplen ni la condición 1 ni la condición 2, se ejecuta el bloque 3.
+
+##El bucle for
+En general, un bucle es una estructura de control que repite un bloque de instrucciones. Un bucle for es un bucle que repite el bloque de instrucciones un número prederminado de veces. El bloque de instrucciones que se repite se suele llamar cuerpo del bucle y cada repetición se suele llamar iteración.
+
+La sintaxis de un bucle for es la siguiente:
+
+for variable in elemento iterable (lista, cadena, range, etc.):
+
+cuerpo del bucle
+
+No es necesario definir la variable de control antes del bucle, aunque se puede utilizar como variable de control una variable ya definida en el programa.
+
+El cuerpo del bucle se ejecuta tantas veces como elementos tenga el elemento recorrible (elementos de una lista o de un range(), caracteres de una cadena, etc.). Por ejemplo:
+
+Ejemplo de bucle 1
+
+print("Comienzo")
+
+for i in [0, 1, 2]:
+
+print("Hola ", end="")
+
+print()
+
+print("Final")
+
+Comienzo
+
+Hola Hola Hola
+
+Final
+
+Puede ver la ejecución paso a paso de este programa utilizando los iconos de avance y retroceso situados abajo a la derecha.
+
+La lista puede contener cualquier tipo de elementos, no sólo números. El bucle se repetirá siempre tantas veces como elementos tenga la lista y la variable irá tomando los valores de uno en uno. Por ejemplo:
+
+Ejemplo de bucle 6
+
+print("Comienzo")
+
+for i in ["Alba", "Benito", 27]:
+
+print(f"Hola. Ahora i vale {i}")
+
+print("Final")
+
+Comienzo
+
+Hola. Ahora i vale Alba
+
+Hola. Ahora i vale Benito
+
+Hola. Ahora i vale 27
+
+Final
+
+El ciclo while esta hecho para condicionar una parte del codigo y mientras no se cumpla el codigo se erepita la instruccion
+
+El siguiente programa escribe los números del 1 al 3:
+
+Ejemplo de bucle while 1
+
+i = 1
+
+while i <= 3:
+
+print(i)
+
+i += 1
+
+print("Programa terminado")
+
+1
+
+2
+
+3
+
+Programa terminado
+
