@@ -372,3 +372,47 @@ print("Programa terminado")
 
 Programa terminado
 
+ ## El módulo turtle
+ 
+ Python incluye un módulo llamado "turtle" que permite crear gráficos de tortuga.
+
+En esta lección se explica cómo utilizar el módulo turtle para crear dibujos sencillos, pero sin utilizar la tortuga.
+
+Para utilizar el módulo turtle sólo hace falta importarlo:
+
+Si se va a escribir código orientado a objetos:
+import turtle
+
+La ventana de dibujo: setup() y title()
+El módulo turtle dibuja en una ventana distinta a la ventana de IDLE. Esta ventana de dibujo se crea al ejecutar un programa y se mantiene al acabar la ejecución del programa, pero se destruye al volver a ejecutar el programa).
+
+La función setup(ancho, alto, posicionX, posicionY) permite definir el tamaño y la posición inicial de la ventana. Los cuatro argumentos de la función son (en píxeles):
+
+
+ancho: ancho de la ventana.
+
+alto: alto de la ventana.
+
+posicionX: posición horizontal de la ventana. Los valores positivos se miden desde el borde izquierdo de la pantalla, los negativos 
+desde el borde derecho de la pantalla.
+
+posicionY: posición vertical de la ventana. Los valores positivos se miden desde el borde superior de la pantalla, los negativos desde el borde inferior de la pantalla.
+
+La función title() permite definir el título de la ventana, que se muestra en el borde superior de la ventana.
+
+from turtle import *
+
+setup(450, 150, 0, 0)
+title("Ejemplo de ventana")
+
+Si no se usa la función setup(), la ventana se crea en el centro de la pantalla (para que se cree la ventana tiene que aparecer alguna función del módulo turtle):
+
+from turtle import *
+
+title("Ejemplo de ventana")
+
+mainloop()
+
+Para crear programas de tortuga interactivos necesitamos que los programas no terminen, sino que permanezcan a la espera y reaccionen a los eventos (de ratón o de teclado) generados por el usuario.
+
+La función mainloop(), que se escribe al final del programa, hace que el programa no termine, sino que permanezca a la espera de los eventos definidos en el programa.
